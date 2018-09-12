@@ -24,15 +24,23 @@ $(document).ready(function() {
 		nav = $('nav[role="navigation"]');
 
 	$(window).on('scroll', function () {
-	  	var cur_pos = $(this).scrollTop();
+	  	/*var cur_pos = $(this).scrollTop();
 	  	sections.each(function() {
 	    	var top = $(this).offset().top - 76
-	        	bottom = top + $(this).outerHeight();
+	        var	bottom = top + $(this).outerHeight();
 	    	if (cur_pos >= top && cur_pos <= bottom) {
 	      		nav.find('a').removeClass('active');
 	      		nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
 	    	}
-	  	});
+	  	});*/
+	  	if ($(document).scrollTop() - 100 + $(window).height() > $("#services").offset().top && $(document).scrollTop() - $("#services").offset().top < $("#services").height())
+            $("#services").find("h2").addClass("wow fadeInDown animated");
+
+	  	if ($(document).scrollTop() - 100 + $(window).height() > $("#package").offset().top && $(document).scrollTop() - $("#package").offset().top < $("#package").height()) {
+            $("#package").find("h2").addClass("wow fadeInDown animated");
+            $("#package").find(".package.oleft").addClass("wow fadeInLeft animated");
+            $("#package").find(".package.oright").addClass("wow fadeInRight animated");
+        }
 	});
 	nav.find('a').on('click', function () {
 	  	var $el = $(this)
