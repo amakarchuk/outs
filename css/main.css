@@ -1,5 +1,6 @@
 @import url(http://allfont.ru/allfont.css?fonts=bitter);
 
+
 body {
 	font-family: 'Bitter', arial !important;
 	font-weight: 400;
@@ -416,7 +417,6 @@ ul li {
 	padding: 0px 30px 25px 30px;
     width: 60%;
 	background-color: #f7f0f0dd;
-
 }
 .carousel-content p{
 	font-family: 'Roboto', Helvetica,Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
